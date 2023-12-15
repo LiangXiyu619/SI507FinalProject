@@ -1,4 +1,4 @@
-# key: AIzaSyBQhuzfyLd3co-CulKlI4fQjD0Lva_KICY
+API_KEY = 'AIzaSyBQhuzfyLd3co-CulKlI4fQjD0Lva_KICY'
 
 import requests
 import json
@@ -19,7 +19,7 @@ if __name__ == '__main__':
                                         '?destination='+destination+
                                         '&origin=1225%20Geddes%20Ave%20Ann%20Arbor'+
                                         '&mode='+mode+
-                                        '&key=AIzaSyBQhuzfyLd3co-CulKlI4fQjD0Lva_KICY')
+                                        '&key='+API_KEY)
                 try:
                     jsonData = json.loads(response.text)['routes'][0]['legs'][0]
                 except:

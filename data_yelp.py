@@ -1,4 +1,4 @@
-# Client ID: rDl9M3sVUUrhMFQlGaK4qA
+API_KEY = 'Ko8Y3LTAND_Qy4iqIBWCC_0bh1AZh7S91IAoBzuzD8Nk7__jQKNNvtwT_7l-N5saOQr9y9i1_ekZdZmc-LgP_LMoDMZDz_9EHnXDP6CF1V2tVsidGqaU3Dg0CYpZZXYx'
 
 import requests
 import json
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     for search in searches:
         url = "https://api.yelp.com/v3/businesses/search?location="+search+"&sort_by=best_match&limit=50"
         headers = {"accept": "application/json",
-                "Authorization": "Bearer Ko8Y3LTAND_Qy4iqIBWCC_0bh1AZh7S91IAoBzuzD8Nk7__jQKNNvtwT_7l-N5saOQr9y9i1_ekZdZmc-LgP_LMoDMZDz_9EHnXDP6CF1V2tVsidGqaU3Dg0CYpZZXYx"}
+                "Authorization": "Bearer "+API_KEY}
         response = requests.get(url, headers=headers)
         businessData = json.loads(response.text)
         try:
